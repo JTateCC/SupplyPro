@@ -43,5 +43,12 @@ namespace SupplyPro.Forms
 
 
         }
+
+        private void launchAppBtn_Click(object sender, EventArgs e)
+        {
+            Product.ProductIndexForm Appform = new Product.ProductIndexForm();
+            Appform.ShowDialog();  
+            this.Close();
+        }
     }
 }

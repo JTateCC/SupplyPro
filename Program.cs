@@ -20,7 +20,7 @@ namespace SupplyPro
             {
                 db.Database.CreateIfNotExists();
             }
-            Application.Run(new Forms.TestForm());
+            Application.Run(new Forms.Product.ProductIndexForm());
         }
     }
 }
