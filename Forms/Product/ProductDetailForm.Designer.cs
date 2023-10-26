@@ -35,19 +35,21 @@
             // ProductDetailGrid
             // 
             this.ProductDetailGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductDetailGrid.Location = new System.Drawing.Point(105, 89);
+            this.ProductDetailGrid.Location = new System.Drawing.Point(118, 111);
+            this.ProductDetailGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProductDetailGrid.Name = "ProductDetailGrid";
             this.ProductDetailGrid.RowHeadersWidth = 51;
             this.ProductDetailGrid.RowTemplate.Height = 24;
-            this.ProductDetailGrid.Size = new System.Drawing.Size(584, 45);
+            this.ProductDetailGrid.Size = new System.Drawing.Size(657, 56);
             this.ProductDetailGrid.TabIndex = 0;
             // 
             // ProductDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1086, 1097);
             this.Controls.Add(this.ProductDetailGrid);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ProductDetailForm";
             this.Text = "ProductDetailForm";
             ((System.ComponentModel.ISupportInitialize)(this.ProductDetailGrid)).EndInit();
