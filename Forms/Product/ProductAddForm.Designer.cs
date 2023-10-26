@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productNameTextBox = new System.Windows.Forms.TextBox();
             this.productNameLabel = new System.Windows.Forms.Label();
             this.productDescriptionTextBox = new System.Windows.Forms.TextBox();
@@ -41,7 +39,7 @@
             this.unitPriceTextBox = new System.Windows.Forms.TextBox();
             this.unitPriceLabel = new System.Windows.Forms.Label();
             this.addProductButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // productNameTextBox
@@ -134,11 +132,22 @@
             this.addProductButton.UseVisualStyleBackColor = true;
             this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(310, 560);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(180, 29);
+            this.cancelBtn.TabIndex = 11;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // ProductAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 1168);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.addProductButton);
             this.Controls.Add(this.unitPriceLabel);
             this.Controls.Add(this.unitPriceTextBox);
@@ -152,15 +161,12 @@
             this.Controls.Add(this.productNameTextBox);
             this.Name = "ProductAddForm";
             this.Text = "ProductAddForm";
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.TextBox productNameTextBox;
         private System.Windows.Forms.Label productNameLabel;
         private System.Windows.Forms.TextBox productDescriptionTextBox;
@@ -172,5 +178,6 @@
         private System.Windows.Forms.TextBox unitPriceTextBox;
         private System.Windows.Forms.Label unitPriceLabel;
         private System.Windows.Forms.Button addProductButton;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

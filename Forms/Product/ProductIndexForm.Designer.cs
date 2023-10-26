@@ -26,12 +26,9 @@ namespace SupplyPro.Forms.Product
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.ProductDataGrid = new System.Windows.Forms.DataGridView();
             this.addProductBtn = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ProductDataGrid
@@ -69,7 +66,6 @@ namespace SupplyPro.Forms.Product
             this.Name = "ProductIndexForm";
             this.Text = "ProductIndexForm";
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -78,6 +74,5 @@ namespace SupplyPro.Forms.Product
 
         private System.Windows.Forms.DataGridView ProductDataGrid;
         private System.Windows.Forms.Button addProductBtn;
-        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
