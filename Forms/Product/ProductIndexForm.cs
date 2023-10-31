@@ -9,7 +9,10 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using SupplyPro.Models;
+using SupplyPro.Controllers;
+
 
 namespace SupplyPro.Forms.Product
 {
@@ -17,22 +20,25 @@ namespace SupplyPro.Forms.Product
 
 
     {
+        ProductController productController = new ProductController();
         private BindingSource allProductBindingSource = new BindingSource();
             public ProductIndexForm()
             {
                 InitializeComponent();
+
             // Assuming you have an instance of your DbContext
                 BindGrid();
-        }
+            }
 
             private void BindGrid()
             {
-                using (var ProductContext = new InventoryDbContext())
-                {
-                    ProductDataGrid.DataSource = allProductBindingSource;
-                    var productList = new BindingList<SupplyPro.Models.Product>(ProductContext.Products.ToList());
-                    allProductBindingSource.DataSource = productList;
-                }
+
+               
+                ProductDataGrid.DataSource = allProductBindingSource;
+                var productList = productController.GetAllProducts();
+                var productBindingList = new BindingList<SupplyPro.Models.Product>(productList);
+                allProductBindingSource.DataSource = productBindingList;
+                
             }
 
             private void ProductDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -48,7 +54,7 @@ namespace SupplyPro.Forms.Product
                     int productId = (int)selectedRow.Cells["ProductId"].Value;
 
                     // Create and open the detail form with the selected ProductId
-                    Product.ProductDetailForm detailForm = new Product.ProductDetailForm(productId);
+                    Product.ProductAddForm detailForm = new Product.ProductDetailForm(productId);
                     detailForm.FormClosed += childFormClosed;
                     this.Hide();
                     detailForm.ShowDialog();

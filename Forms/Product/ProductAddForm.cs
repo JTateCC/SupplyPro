@@ -29,8 +29,9 @@ namespace SupplyPro.Forms.Product
             quantityTextBox.DataBindings.Add("Text", productBindingSource, "QuantityInStock");
             unitPriceTextBox.DataBindings.Add("Text", productBindingSource, "UnitPrice");
 
-            // Set the data source for the BindingSource
-            productBindingSource.DataSource = newProduct;
+            //Set the data source for the BindingSource
+
+           productBindingSource.DataSource = newProduct;
         }
 
         private void addProductButton_Click(object sender, EventArgs e)
