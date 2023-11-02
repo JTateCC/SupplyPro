@@ -47,14 +47,13 @@ namespace SupplyPro.Forms.Product
                 if (e.RowIndex >= 0)
                 {
                     // Get the selected row
-                    Console.WriteLine(e.RowIndex);
                     DataGridViewRow selectedRow = ProductDataGrid.Rows[e.RowIndex];
 
                     // Retrieve the value from the ProductId column (assuming it's in the first column)
                     int productId = (int)selectedRow.Cells["ProductId"].Value;
 
                     // Create and open the detail form with the selected ProductId
-                    Product.ProductAddForm detailForm = new Product.ProductDetailForm(productId);
+                    Product.ProductDetailForm detailForm = new Product.ProductDetailForm(productId);
                     detailForm.FormClosed += childFormClosed;
                     this.Hide();
                     detailForm.ShowDialog();
