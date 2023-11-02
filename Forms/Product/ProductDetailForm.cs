@@ -80,14 +80,16 @@ namespace SupplyPro.Forms.Product
         }
         private void product_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            using (var dbContext = new InventoryDbContext())
-            {
-                // Assuming you have a reference to the current product
-                dbContext.Entry(currentProduct).State = EntityState.Modified;
-                dbContext.SaveChanges();
-            }
-            
+            productController.updateProduct(currentProduct);
         }
+
+
+        private void deleteProductBtn_Click(object sender, EventArgs e)
+        {
+            productController.DeleteProduct(currentProduct.ProductId);
+            this.Close();
+        }
+
 
 
 
@@ -95,5 +97,7 @@ namespace SupplyPro.Forms.Product
         {
             this.Close();
         }
+
+      
     }
 }

@@ -40,6 +40,7 @@
             this.unitPriceLabel = new System.Windows.Forms.Label();
             this.editProductButton = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.deleteProductBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // productNameTextBox
@@ -149,11 +150,22 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
+            // deleteProductBtn
+            // 
+            this.deleteProductBtn.Location = new System.Drawing.Point(73, 510);
+            this.deleteProductBtn.Name = "deleteProductBtn";
+            this.deleteProductBtn.Size = new System.Drawing.Size(136, 35);
+            this.deleteProductBtn.TabIndex = 12;
+            this.deleteProductBtn.Text = "Delete Product";
+            this.deleteProductBtn.UseVisualStyleBackColor = true;
+            this.deleteProductBtn.Click += new System.EventHandler(this.deleteProductBtn_Click);
+            // 
             // ProductDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 934);
+            this.Controls.Add(this.deleteProductBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.editProductButton);
             this.Controls.Add(this.unitPriceLabel);
@@ -187,5 +199,6 @@
         private System.Windows.Forms.Label unitPriceLabel;
         private System.Windows.Forms.Button editProductButton;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button deleteProductBtn;
     }
 }
