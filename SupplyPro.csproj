@@ -92,8 +92,13 @@
     <Compile Include="Migrations\202310191339507_TestCreation.designer.cs">
       <DependentUpon>202310191339507_TestCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312311732412_AddLocationTable1.cs" />
+    <Compile Include="Migrations\202312311732412_AddLocationTable1.designer.cs">
+      <DependentUpon>202312311732412_AddLocationTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\InventoryDbContext.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310191339507_TestCreation.resx">
       <DependentUpon>202310191339507_TestCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312311732412_AddLocationTable1.resx">
+      <DependentUpon>202312311732412_AddLocationTable1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

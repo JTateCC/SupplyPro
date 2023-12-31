@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace SupplyPro.Models
         private string sKU;
         private int quantityInStock;
         private decimal unitPrice;
+
 
 
         [Key]
@@ -34,6 +36,7 @@ namespace SupplyPro.Models
                 }
             }
         }
+
 
         public string ProductDescription
         {
@@ -86,6 +89,13 @@ namespace SupplyPro.Models
                 }
             }
         }
+
+        // Foreign key to Location
+        [ForeignKey("Location")]
+        public int? LocationId { get; set; }
+
+        // Navigation property to Location
+        public Location Location { get; set; }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

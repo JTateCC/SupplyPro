@@ -62,5 +62,10 @@ namespace SupplyPro.Forms.Product
         {
             this.Close();
         }
+
+        private void ProductAddForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
